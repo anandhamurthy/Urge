@@ -19,16 +19,14 @@ public class BackgroundService extends Service{
     public int onStartCommand(Intent intent, int flags, int startId) {
         //TODO do something useful
         try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                ((AudioManager) Objects.requireNonNull(
-                        getSystemService(Context.AUDIO_SERVICE))).setStreamMute(AudioManager.STREAM_SYSTEM, false);
-            }
+            ((AudioManager) Objects.requireNonNull(
+                    getSystemService(Context.AUDIO_SERVICE))).setStreamMute(AudioManager.STREAM_SYSTEM, false);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
 
-            muteBeepSoundOfRecorder();
+        unmute();
 
         return Service.START_STICKY;
     }
@@ -39,7 +37,7 @@ public class BackgroundService extends Service{
         return null;
     }
 
-    private void muteBeepSoundOfRecorder() {
+    private void unmute() {
         AudioManager amanager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
        if (amanager != null) {
 //            amanager.setStreamMute(AudioManager.STREAM_NOTIFICATION, false);
