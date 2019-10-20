@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".AnswerActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/icon"
+        android:id="@+id/answer_profile_image"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Urge"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/answer_profile_image"
+        android:fontFamily="@font/nunito_semibold"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/answer_name"
+        android:layout_height="wrap_content"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/answer_name"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:id="@+id/answer_attend"
+            android:src="@drawable/call_end"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/colorGreen"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:id="@+id/answer_end"
+            android:src="@drawable/call_end"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/colorRed"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</RelativeLayout>
