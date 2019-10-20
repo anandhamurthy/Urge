@@ -22,6 +22,7 @@
         android:layout_below="@+id/answer_profile_image"
         android:fontFamily="@font/nunito_semibold"
         android:textSize="25dp"
+        android:textColor="@color/colorAccent"
         android:layout_marginTop="20dp"
         android:id="@+id/answer_name"
         android:layout_height="wrap_content"/>

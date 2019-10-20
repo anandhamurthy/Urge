@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun onStart() {
         super.onStart()
         startService(Intent(this, BackgroundService::class.java))
@@ -77,58 +76,58 @@ class MainActivity : AppCompatActivity() {
         const val REQUEST_PERMISSION = 0
     }
 
-    public fun one (view: View) {
+    fun one (view: View) {
         onButtonClick(btn_one,dialer_number,"1")
     }
-    public fun two (view: View) {
+    fun two (view: View) {
         onButtonClick(btn_two,dialer_number,"2")
     }
-    public fun three (view: View) {
+    fun three (view: View) {
         onButtonClick(btn_three,dialer_number,"3")
     }
-    public fun four (view: View) {
+    fun four (view: View) {
         onButtonClick(btn_four,dialer_number,"4")
     }
-    public fun five (view: View) {
+    fun five (view: View) {
         onButtonClick(btn_five,dialer_number,"5")
     }
-    public fun six (view: View) {
+    fun six (view: View) {
         onButtonClick(btn_six,dialer_number,"6")
     }
-    public fun seven (view: View) {
+    fun seven (view: View) {
         onButtonClick(btn_seven,dialer_number,"7")
     }
-    public fun eight (view: View) {
+    fun eight (view: View) {
         onButtonClick(btn_eight,dialer_number,"8")
     }
-    public fun nine (view: View) {
+    fun nine (view: View) {
         onButtonClick(btn_nine,dialer_number,"9")
     }
-    public fun star (view: View) {
+    fun star (view: View) {
         onButtonClick(btn_star,dialer_number,"*")
     }
-    public fun zero (view: View) {
+    fun zero (view: View) {
         onButtonClick(btn_zero,dialer_number,"0")
     }
 
-    public fun hash (view: View) {
+    fun hash (view: View) {
         onButtonClick(btn_hash,dialer_number,"#")
     }
 
-    public fun clear (view: View) {
+    fun clear (view: View) {
         dialer_number.setText("")
     }
 
-    public fun call (view: View) {
-        if(dialer_number.getText().length<=3){
+    fun call (view: View) {
+        if(dialer_number.text.length<=3){
             Toast.makeText(this, "Cannot Dial", Toast.LENGTH_SHORT).show()
         }else{
             makeCall()
         }
     }
 
-    public fun onButtonClick(btn: TextView, edt: EditText, inp: String){
-        var cahe = dialer_number.getText().toString()
+    fun onButtonClick(btn: TextView, edt: EditText, inp: String){
+        var cahe = dialer_number.text.toString()
         edt.setText(cahe+inp)
     }
 }
